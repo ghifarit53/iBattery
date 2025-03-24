@@ -16,7 +16,7 @@ struct MenuBarApp: App {
     var body: some Scene {
         MenuBarExtra {
             if batteryManager.hasCheckedBattery {
-                Button("Battery Settings...") {
+                Button("Open Battery Settings") {
                     if let url = URL(string: "x-apple.systempreferences:com.apple.preference.battery") {
                         NSWorkspace.shared.open(url)
                     }
