@@ -90,7 +90,7 @@ struct MenuBarApp: App {
             let ratio = $0.size.height / $0.size.width
             $0.size.height = 12.5
             $0.size.width = $0.size.height / ratio
-            $0.isTemplate = (state == "normal")
+            $0.isTemplate = (state == "normal" && percentage > 20)
             return $0
         }(image)
 
